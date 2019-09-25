@@ -61,6 +61,7 @@ Partial Class Form1
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button17 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -72,7 +73,6 @@ Partial Class Form1
         Me.Button14 = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Button16 = New System.Windows.Forms.Button()
-        Me.Button17 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -227,12 +227,12 @@ Partial Class Form1
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(296, 44)
+        Me.Button7.Location = New System.Drawing.Point(282, 44)
         Me.Button7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(59, 38)
+        Me.Button7.Size = New System.Drawing.Size(73, 38)
         Me.Button7.TabIndex = 17
-        Me.Button7.Text = "Play"
+        Me.Button7.Text = "Tocar"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'TextBox7
@@ -257,9 +257,9 @@ Partial Class Form1
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(293, 6)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(115, 16)
+        Me.Label6.Size = New System.Drawing.Size(112, 16)
         Me.Label6.TabIndex = 20
-        Me.Label6.Text = "MÚSICAS EM .WAV"
+        Me.Label6.Text = "MÚSICAS EM .MP3"
         '
         'TextBox8
         '
@@ -419,6 +419,15 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = " "
         '
+        'Button17
+        '
+        Me.Button17.Location = New System.Drawing.Point(7, 21)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(331, 30)
+        Me.Button17.TabIndex = 36
+        Me.Button17.Text = "ABRIR CALCULADORA DE PROGRESSÃO ARITMÉTICA"
+        Me.Button17.UseVisualStyleBackColor = True
+        '
         'Button15
         '
         Me.Button15.Location = New System.Drawing.Point(7, 91)
@@ -525,19 +534,10 @@ Partial Class Form1
         '
         Me.Button16.Location = New System.Drawing.Point(361, 45)
         Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(66, 37)
+        Me.Button16.Size = New System.Drawing.Size(70, 37)
         Me.Button16.TabIndex = 43
-        Me.Button16.Text = "Pause"
+        Me.Button16.Text = "Pausar"
         Me.Button16.UseVisualStyleBackColor = True
-        '
-        'Button17
-        '
-        Me.Button17.Location = New System.Drawing.Point(7, 21)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(331, 30)
-        Me.Button17.TabIndex = 36
-        Me.Button17.Text = "ABRIR CALCULADORA DE PROGRESSÃO ARITMÉTICA"
-        Me.Button17.UseVisualStyleBackColor = True
         '
         'Form1
         '
