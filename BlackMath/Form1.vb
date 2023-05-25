@@ -113,11 +113,11 @@ Public Class Form1
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
         Dim X As String = TextBox7.Text
-        ToolTip1.SetToolTip(Button7, "Você deve colocar as músicas em .mp3 dentro da pasta Usuários e em seguida digitar o nome delas na caixa acima")
+        ToolTip1.SetToolTip(Button7, "Você deve selecionar uma música em .mp3 e em seguida clicar em 'Tocar'")
         Try
             SomBotao()
-            If My.Computer.FileSystem.FileExists("C:\Users\" & X & ".mp3") Then
-                Player.URL = "C:\Users\" & X & ".mp3"
+            If My.Computer.FileSystem.FileExists("C:\Users\" & Environment.UserName & "\Music\" & X & ".mp3") Then
+                Player.URL = "C:\Users\" & Environment.UserName & "\Music\" & X & ".mp3"
                 Player.controls.play()
                 pausou = False
                 Button16.Text = "Pausar"
@@ -266,8 +266,20 @@ Public Class Form1
     End Sub
 
     Private Sub Button14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button14.Click
-        Process.Start("Explorer", "C:\Users")
+        'Process.Start("Explorer", "C:\Users\" & Environment.UserName & "\Music")
+        Dim fd As OpenFileDialog = New OpenFileDialog()
+        Dim strFileName As String
 
+        fd.Title = "Selecione uma música"
+        fd.InitialDirectory = "C:\Users\" & Environment.UserName & "\Music"
+        fd.Filter = "All MP3 Files|*.mp3"
+        fd.FilterIndex = 2
+        fd.RestoreDirectory = True
+
+        If fd.ShowDialog() = DialogResult.OK Then
+            strFileName = System.IO.Path.GetFileNameWithoutExtension(fd.FileName)
+            TextBox7.Text = strFileName
+        End If
     End Sub
 
     Private Sub Button15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button15.Click
